@@ -1,0 +1,24 @@
+
+      <div class="card card-product">
+         <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" [src]="product.imageUrl">
+    </div>
+     <div matTooltip="Click on the image to see more details" class="ml-5" matTooltipPosition="above"> 
+		    <div class="card-content">
+		      <span class="card-title activator grey-text text-darken-4 lead"><strong>{{product.title}}</strong><i class="material-icons right">more_vert</i></span>
+		      	<button class="btn btn-large red darken-2 right z-depth-2" (click)="onCloseDialog()">CLOSE</button>
+		     </div>
+ 	</div>
+         <div class="card-reveal">
+         	<span class="card-title grey-text text-darken-4">{{product.title}}<i class="material-icons right">close</i></span>
+		         <div class="card-tabs">
+		      		<app-tabs [items]="tabItems"></app-tabs>
+
+		    	</div>
+		</div>
+	
+      </div>
+
+
+
+ 

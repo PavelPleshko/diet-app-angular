@@ -1,0 +1,28 @@
+
+$dark-bg:rgba(0,0,0,0.8);
+
+.inner-workspace{
+	background-size:cover;
+	height:70%;
+	width:90%;
+	z-index:0;
+}
+
+
+.ingredientCounter{
+	color:#fff;
+	position:absolute;
+	background:$dark-bg;
+	border-radius:50%;
+	font-size:8pt;
+	font-weight:700;
+	font-family:sans-serif;
+	padding-left:7px;
+	padding-right:7px;
+	padding-top:3px;
+	padding-bottom:3px;
+	transform:translateY(-270%) translateX(190%);
+}
+
+
+

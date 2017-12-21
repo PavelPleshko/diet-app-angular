@@ -1,0 +1,21 @@
+.fav-link{
+	width:80px;
+	height:35px;
+	font-size:12pt;
+	border-radius:2px;
+	background:none;
+	border:2px solid #f44336;
+	color:#f44336;
+	float:right;
+	padding:5px;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+.fav-link:hover{
+	transition:.5s;
+	background:#f44336;
+	color:white;
+	cursor:pointer;
+
+}

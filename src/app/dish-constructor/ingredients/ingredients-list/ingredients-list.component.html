@@ -1,0 +1,3 @@
+<ul class="ingr-list" *ngFor="let ingredient of ingredients">
+	<li><app-ingredient-single (addIngredient)="onAddIngredient($event)" [ingredient]="ingredient"></app-ingredient-single></li>
+</ul>

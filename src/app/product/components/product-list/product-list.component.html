@@ -1,0 +1,19 @@
+
+
+<mat-form-field>
+	<input type="text" matInput name="searchFor" placeholder="Enter the product name..." class="" [formControl]="productTitleFilter">
+</mat-form-field>
+
+
+
+	<div class="row">
+<div class="col-md-4" *ngFor = "let product of products | titleFilter : 'title' : filterCriteria">
+<app-product [product]="product" (addProd)="onAddProduct($event)"></app-product>
+</div>
+
+</div>
+
+
+	
+	
+

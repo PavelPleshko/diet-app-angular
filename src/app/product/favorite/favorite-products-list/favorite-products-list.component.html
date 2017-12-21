@@ -1,0 +1,8 @@
+
+	<app-favorite-product-single *ngFor="let favorite of favorites" (onFavRemove)="removeFav($event)" [favorite]="favorite"></app-favorite-product-single>
+
+
+<div *ngIf="favorites.length==0">
+	<div class="">No favorites in your diary. Head over to the product list to change it <button class="btn blue lighten-2 waves-effect" [routerLink]="['/products/list/']">Go!</button>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+	
+
+   
+     <svg width="60%" [attr.height]="42">
+    <g>
+  <rect [attr.height]="12"
+        x="0" y="0" width="100%"
+        class="mealline"></rect>
+
+  <rect  x="0" y="0" [ngClass]="{'low-level':item.normForMeal<40,'middle-level':item.normForMeal>40 && item.normForMeal<70,'high-level':item.normForMeal>70}"
+        [attr.width]="item.normForMeal + '%'" [attr.height]="12"
+        class="norm"></rect>
+    
+       
+       <text class="text-small" x="2%" y="23">Satisfactory rate for this meal is {{item.normForMeal}}% </text>
+       <text class="text-small" x="80%" y="23">{{item.amount | toFixed : 3}}</text>
+        <rect [attr.height]="5"
+        x="0" y="26" width="100%"
+        class="mealline"></rect>
+           <rect  x="0" y="26" [ngClass]="{'low-level':item.RDA<40,'middle-level':item.RDA>40 && item.RDA<70,'high-level':item.RDA>70}"
+        [attr.width]="item.RDA + '%'" [attr.height]="5"
+        class="norm"></rect>
+        
+         <text class="text-small" x="2%" y="40">{{item.RDA}}% for the day</text>
+       
+    </g>
+</svg>

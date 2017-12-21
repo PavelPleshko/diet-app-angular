@@ -1,0 +1,60 @@
+
+
+  .collapsible-header{
+     background: rgba(0,0,0,.3) !important;
+     border-bottom:1px solid rgba(0,0,0,.3) !important;
+  }
+
+  .collapsible-header:hover{
+     background: rgba(0,0,0,.4) !important;
+  }
+
+  .collapsible{
+    border:none;
+  	border-right:3px solid rgba(0,0,0,.6);
+  }
+
+  a.collapsible-header{
+    color:white;
+  }
+
+    a.collapsible-header:hover{
+    color:white;
+    text-decoration: none;
+  }
+
+
+  .sidenav-subitem{
+    color:white;
+    padding-left: 20px;
+    padding-bottom: 3px;
+    padding-top:3px;
+    font-size:14px;
+    font-family: fantasy;
+    border-bottom:1px solid rgba(0,0,0,.1);
+    text-align: left;
+  }
+    .sidenav-subitem a{
+    color:white;
+  }
+  .sidenav-subitem a:hover{
+    color:white;
+    text-decoration: none;
+
+  }
+
+
+  .sidenav-subitem:hover{
+    background: rgba(0,0,0,.3);
+    text-decoration: none;
+    color:white;
+  }
+
+  .collapsible-body{
+     background: rgba(0,0,0,.2) !important;
+     height:auto;
+     padding:0;
+     border:none;
+  }
+
+

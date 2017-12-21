@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+body {
+	background:#2a3136;
+	color:#fff;
+}
+
+.toast{
+	position:relative;
+}
+.opacity-no{
+	animation:opacity 1s;
+}
+
+
+@keyframes opacity {
+	from { 
+ opacity:1; 
+  } 
+  to {
+ opacity:0;
+ transform:translateY(-30%);
+ display:none;
+
+ }
+}
+
+
+.emerge{
+	animation:emerging 1s linear;
+
+}
+
+@keyframes emerging {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+
+.virtual-workspace{
+	position:absolute;
+	width:450px;
+	height:450px;
+	transform:translateY(-400px);
+	z-index:1;
+}
+

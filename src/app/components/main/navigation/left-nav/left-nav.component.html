@@ -1,0 +1,13 @@
+
+
+ <ul class="collapsible" data-collapsible="expandable">
+                    <li *ngFor="let item of sideNavItems" class="sidenav-bg white-text"><a class="collapsible-header waves-effect"> <i class="material-icons">{{item.iconMat}}</i> {{item.title}}<i class="material-icons right-align">expand_more</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li *ngFor="let subitem of item.subitems" class="sidenav-subitem"><a [routerLink]="subitem.link" class="waves-effect">{{subitem.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+ </ul>
+       

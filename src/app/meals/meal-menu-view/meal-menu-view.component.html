@@ -1,0 +1,47 @@
+<ul class="float-sm-right"> 
+    <li class="dropdown"> 
+        <a class="dropdown-toggle" data-toggle="dropdown"  
+           href="#" role="button" aria-haspopup="true"  
+           aria-expanded="false"> 
+            Current meal: ({{meal.count}} items) 
+        </a> 
+        <div class="dropdown-menu dropdown-menu-right"  
+             aria-labelledby="meal"> 
+
+             <div class="table-responsive"> 
+    <table class="table table-sm highlight"> 
+        <tbody> 
+            <tr> 
+                <td class="font-weight-bold">Title</td> 
+                <td class="font-weight-bold">Category</td> 
+                <td class="font-weight-bold">Count</td> 
+                <td class="font-weight-bold">Calories</td> 
+            </tr> 
+            <tr *ngFor="let item of croppedItems"> 
+                <td>{{item.name}}</td> 
+                <td>{{item.meal.category}}</td> 
+                <td>{{item.count}}</td> 
+                <td>{{item.calories}}</td> 
+            </tr> 
+        </tbody> 
+    </table> 
+     <span class="float-sm-right" *ngIf="showMore">{{itemsDisplayRemainder}}<small>{{captionItems}}</small></span>
+</div> 
+<div class="row"> 
+    <div class="col-md-12"> 
+        <div class="total float-sm-right"> 
+            <b>Total calories:  
+              {{mealTotal}} Kcal 
+            </b> 
+        </div> 
+    </div> 
+</div> 
+<div class="row"> 
+    <div class="col-md-12"> 
+        <a [routerLink]="['/meals']"  
+           class="btn blue float-sm-right waves-effect"> 
+            <i class="material-icons right">local_restaurant</i>  
+            Details 
+        </a> 
+    </div> 
+</div> 

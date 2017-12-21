@@ -1,0 +1,65 @@
+<form class="form-group black-text" [formGroup]="formCalc" name="formCalc" novalidate>
+		<div  class="row">
+		<div class="col-md-6">
+		<input type="text" name="weight" formControlName="weight" class="form-control" placeholder="Weight" required>
+		<small class="text-danger" *ngIf="formCalc.controls.weight.errors?.required && !formCalc.controls.weight.pristine">Weight is required</small>
+			<label class="text-danger" *ngIf="formCalc.controls.weight.errors?.min || formCalc.controls.weight.errors?.max">Weight should be between 40 and 200</label>
+		</div>
+		<div class="col-md-6">
+		<input type="text" name="height"  formControlName="height" class="form-control" placeholder="Height" required >
+		<label class="text-danger" *ngIf="formCalc.controls.height.errors?.required && !formCalc.controls.height.pristine">Height is required</label>
+		<label class="text-danger" *ngIf="formCalc.controls.height.errors?.min || formCalc.controls.height.errors?.max">Height should be between 140 and 220</label>
+		</div>
+
+
+<div class="form-group">
+		<label>Gender:</label>
+		<input type="radio" id="male"  class="with-gap" name="gender" formControlName="gender" value="male" required checked >
+		<label for="male">Male</label>
+		<input type="radio" id="female" class="with-gap" name="gender" formControlName="gender" value="female" required >
+		<label for="female">Female</label>
+		</div>
+		
+		</div>
+		<input type="text" name="age"  formControlName="age" class="form-control" placeholder="Age..." required >
+<a (click)="onSubmitForm(formCalc)" [ngClass]="{'pulse':formCalc.valid && !formSubmitted,'disabled':!formCalc.valid && !formSubmitted}" class="btn blue waves-effect white-text darken-3"><i class="material-icons right">keyboard_arrow_right</i>Calculate</a>
+
+</form>
+<div *ngIf="formSubmitted" class="result">
+<h5 class="page-header">You body requires daily:</h5>
+<table class="white table striped highlight black-text">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Value</th>
+      <th>Amount</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Calories</td>
+      <td>{{resultCalories}}</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Proteins</td>
+      <td>Number</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Carbs</td>
+      <td>Number</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Fats</td>
+      <td>Number</td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn blue darken-4 waves-effect right white-text" (click)="saveToProfile()">Save to profile</a>
+
+</div>
+	

@@ -1,0 +1,6 @@
+  <img [src]="item.meal.imageUrl" alt="" class="circle">
+      <span class="title">{{item.meal.title}}</span>
+     <p>Total items:<small>{{item.count}}</small></p>
+       <p>Calories:<small>{{calories}}</small></p>
+        <p>Total calories:<small>{{totalCalories}}</small></p>
+      <a href="#!" class="secondary-content" (click)="deleteItem(item,$event)"><i class="material-icons">close</i></a>

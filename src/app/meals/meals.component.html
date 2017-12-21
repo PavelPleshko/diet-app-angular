@@ -1,0 +1,70 @@
+
+<div class="container mt-2">
+    <app-meal-elements [meal]="meal"></app-meal-elements>
+  
+   <app-meal-slider  [height]="40" [dailyNeed]="dailyNeed" [meal]="meal"></app-meal-slider>
+    <div class="row">
+        <div class="col-md-7">
+<div *ngIf="meal && meal.count">
+    <form #form="ngForm">
+        <div class="table-responsive">
+            <table class="white-text table-products bordered">
+                <tbody>
+                    <tr>
+                        <td class="font-weight-bold">Title</td>
+                       
+                        <td class="font-weight-bold">Count</td>
+                       
+                    </tr>
+                
+                    <tr *ngFor="let item of meal.items">
+                        <td>{{item.meal.title}}</td>
+                       
+                           <td> <input type="number" name="{{item.meal.title}}" min="1"
+                                    [ngModel]="item.count"
+                                    (ngModelChange)="item.count = update($event, item)">
+                                
+                      </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+<div class="z-depth-5 black-text warning-empty" *ngIf="meal && !meal.count">The meal is empty! Add some products</div>
+<div class="z-depth-5 black-text warning-nomeal" *ngIf="!meal">Oops.It seems that you don't have meals</div>
+        </div>
+
+
+        <div class="col-md-5">
+            <div class=" card card-body bg-dark text-light">
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="col-sm-5">Total items</label>
+                        <div class="col-sm-7">
+                            <h4 *ngIf="meal" class="form-control-static ml-2">{{meal.count}}</h4>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-12">
+                            <button class="btn amber darken-4 btn-block" [routerLink]="['/products/list']">Add more items</button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-12">
+                        	<div *ngIf="meal">
+                            <button class="btn red lighten-1 btn-block" [class.disabled]="meal.items.length==0" (click)="clearMeal(meal)">Clear meal</button>
+                            <button class="btn red darken-3 btn-block" (click)="deleteMeal(meal)">Delete meal</button>
+                        </div>
+                        <div *ngIf="!meal">
+                        	<button class="btn blue darken-3 btn-block" (click)="toMealBuilder()">Create meal</button>
+                        </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

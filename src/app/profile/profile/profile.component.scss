@@ -1,0 +1,51 @@
+$main-background:rgba(0,0,0,.2);
+$hover-bg:rgba(0,0,0,0.1);
+
+.jumbotron{
+	background:rgba(0,0,0,.2);
+}
+
+
+.change-photo{
+	background:#3e4b55;
+	padding:4px;
+	border-radius:1px;
+	margin-top:7px !important;
+	width:150px !important;
+	text-align:center;
+	transform:translateX(5%);
+
+	&:hover{
+	background:rgba(0,0,0,.1);
+	cursor:pointer;
+
+	}
+}
+
+.profile-photo-tile{
+	background:$main-background;
+	padding:30px 10px 40px 25px;
+}
+
+.page-info-wrap {
+	background:$main-background;
+	padding-top:20px;
+	padding-left:20px;
+	padding-left:15px;
+}
+
+.user_status{
+	font-family:sans-serif;
+	&:hover{
+		background:$hover-bg;
+		text-shadow:1px 1px 1px 1px rgba(255,255,255,0.2);
+	}
+}
+
+.page-info-top{
+	padding-bottom:20px;
+}
+
+.info-divider{
+	margin-right:15px;
+}

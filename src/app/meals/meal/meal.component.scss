@@ -1,0 +1,56 @@
+.meal-type-badge{
+	width:auto;
+	height:15px;
+	text-align:center;
+	border-radius:3px;
+	outline:none;
+	padding:2px;
+	text-transform:uppercase;
+	font-size:8pt;
+	
+	transform:translateX(20%) translateY(100%);
+}
+
+.z-index-2 {
+	z-index:2;
+}
+.z-index-3{
+	z-index:3;
+}
+
+.red-outline {
+	background: #f44336;
+	
+}
+
+.green-outline {
+	background: #388e3c;
+	
+}
+
+.yellow-outline {
+	background: #cddc39;
+	color:black;
+}
+
+.amber-outline {
+	background: #ffc107;
+	
+}
+
+.orange-outline {
+	background: #ff3d00;
+}
+
+.blue-outline {
+	background: #0277bd;
+}
+
+
+.created-at{
+	color:#00E4AC;
+}
+
+.btn{
+	background:#00E4AC;
+}

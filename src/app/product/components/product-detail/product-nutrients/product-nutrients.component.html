@@ -1,0 +1,18 @@
+
+<table  class="black-text" matSort (matSortChange)="sortData($event)">
+	 <div>Measure <small>(100g)</small></div>
+  <tr>
+    <th mat-sort-header="nutrient">Nutrient</th>
+    <th mat-sort-header="amount">Amount</th>
+    <th mat-sort-header="RDA">% of daily norm</th>
+    <th mat-sort-header="limits">Limits?</th>
+  </tr>
+
+  <tr *ngFor="let nutrient of sortedData;let odd=odd" [ngClass]="getClasses(odd)">
+    <td>{{nutrient.title}}</td>
+    <td>{{nutrient.amount}}</td>
+    <td>{{nutrient.RDA}}</td>
+    <td>{{nutrient.limit}}</td>
+  </tr>
+</table>
+

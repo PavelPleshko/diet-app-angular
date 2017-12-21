@@ -1,0 +1,13 @@
+Today is {{date | date:'longDate'}}.
+<div *ngIf="ration && ration.items.length>0" class="">
+	<h3>{{ration.name}}</h3>
+
+	<app-ration-meals-list (activeMealChange)="onActiveMealChange($event)" [meals]="ration.items">
+
+	</app-ration-meals-list>
+
+</div>
+
+<div *ngIf="ration && ration.items.length <=0">
+	There are no meals yet.Please head to mealbuilder and create some.
+</div>

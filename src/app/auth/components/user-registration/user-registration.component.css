@@ -1,0 +1,13 @@
+.btn-submit{
+	background:#00E4AC;
+	float:right;
+}
+
+
+.reg-form{
+	margin-top:15px;
+	background:rgba(0,0,0,.3);
+	padding:15px;
+	border-radius:2px;
+	color:#fff;
+}

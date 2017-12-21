@@ -1,0 +1,105 @@
+<h3 class="text-center page-header">Create new product</h3>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit($event,productForm)" novalidate>
+<div class="row form-group">
+		<div class="col-xs-12 col-md-6">
+		<label for="title">Product title</label>
+		<input type="text" class="form-control" name="title" formControlName="title" placeholder="Product title">
+		<label *ngIf="productForm.controls.title.errors?.required && !productForm.controls.title.pristine" class="alert alert-danger">Title is required</label>
+		</div>
+
+		<div class="col-xs-12 col-md-6">
+		<label for="category">Choose category:</label>
+		<input type="text" class="form-control" name="category" formControlName="category" placeholder="Category">
+		</div>
+</div>
+
+<div class="form-group" formGroupName="nutrients">
+	<label>Nutrients:</label>
+	<label for="proteins">Proteins:</label>
+	<input type="text" class="form-control" name="proteins" formControlName="proteins">
+	<label for="carbs">Carbs:</label>
+	<input type="text" class="form-control" name="carbs" formControlName="carbs">
+	<label for="fats">Fats:</label>
+	<input type="text" class="form-control" name="fats" formControlName="fats">
+</div>
+
+
+<!-- <!-- <input type="file" (change)="fileChange($event)" id="image" name="image" placeholder="Upload file" accept=".pdf,.doc,.docx,.jpg"> -->
+<!-- 
+<div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+  <h1>Drag and Drop</h1>
+</div> -->
+
+<!-- <label class="upload-button">
+  <input type="file" ngFileSelect [options]="options" name="image" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+  or choose file(s)
+</label> --> -->
+
+<button type="button" class="start-upload-btn" (click)="startUpload()">
+  Start Upload
+</button>
+
+
+
+
+
+
+<h3 class="text-center">Vitamins' information of the product.</h3>
+
+<div class="form-group" formGroupName="vitamins">
+
+	<div class="row">
+		<div class="col-md-6">
+	<label for="A">Vitamin A:</label>
+	<input type="text" class="form-control" name="A"  formControlName="Vitamin_A" required >
+	<label for="B1">Vitamin B1:</label>
+	<input type="text" class="form-control" name="B1"  formControlName="Vitamin_B1" required >
+	<label for="B2">Vitamin B2:</label>
+	<input type="text" class="form-control" name="B2"  formControlName="Vitamin_B2" required >
+	<label for="B3">Vitamin B3:</label>
+	<input type="text" class="form-control" name="B3"  formControlName="Vitamin_B3" required >
+	<label for="B5">Vitamin B5:</label>
+	<input type="text" class="form-control" name="B5"  formControlName="Vitamin_B5" required >
+	<label for="B6">Vitamin B6:</label>
+	<input type="text" class="form-control" name="B6"  formControlName="Vitamin_B6" required >
+	<label for="B7">Vitamin B7:</label>
+	<input type="text" class="form-control" name="B7"  formControlName="Vitamin_B7" required >
+		</div>
+
+		<div class="col-md-6">
+	<label for="B9">Vitamin B9:</label>
+	<input type="text" class="form-control" name="B9"  formControlName="Vitamin_B9" required >
+	<label for="B12">Vitamin B12:</label>
+	<input type="text" class="form-control" name="B12"  formControlName="Vitamin_B12" required >
+	<label for="C">Vitamin C:</label>
+	<input type="text" class="form-control" name="C"  formControlName="Vitamin_C" required >
+	<label for="D">Vitamin D:</label>
+	<input type="text" class="form-control" name="D"  formControlName="Vitamin_D" required >
+	<label for="E">Vitamin E:</label>
+	<input type="text" class="form-control" name="E"  formControlName="Vitamin_E" required >
+	<label for="K">Vitamin K:</label>
+	<input type="text" class="form-control" name="K"  formControlName="Vitamin_K" required >
+		</div>
+	</div>
+</div>
+
+
+
+	
+
+
+<div class="form-group" formGroupName="minerals">
+	<label>Minerals:</label>
+	<label for="Ca">Calcium(mg):</label>
+	<input type="text" class="form-control" name="Ca"  formControlName="Ca" required >
+	<label for="Mg">Magnesium(mkg):</label>
+	<input type="text" class="form-control" name="Mg"  formControlName="Mg" required >
+	<label for="Fe">Ferrum(mg):</label>
+	<input type="text" class="form-control" name="Fe"  formControlName="Fe" required >
+</div>
+
+
+
+<button type="submit" class="btn btn-primary" [disabled]="!productForm.valid">Submit</button>
+
+</form>

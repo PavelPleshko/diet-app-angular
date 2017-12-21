@@ -1,0 +1,39 @@
+
+    <div class="slider">
+        <h5 class="center white-text">Satisfactory rate</h5>
+        <div class="white-text">Your body requires daily {{dailyNeed}} <small>Kcal</small></div>
+
+
+        <svg width="100%" [attr.height]="50">
+    <g>
+  <rect [attr.height]="25"
+        x="0" y="0" width="100%"
+        class="mealline"></rect>
+
+  <rect  x="0" y="0" 
+        [attr.width]="forMeal + '%'" [attr.height]="25"
+        class="norm"></rect>
+
+  <rect *ngIf="overeatingForMeal" x="0" y="0"
+        [attr.width]="overeatingForMeal + '%'" [attr.height]="25"
+        class="overlimit"></rect>
+        <text x="50%" y="19" class="" *ngIf="forMeal<=100">{{forMeal}}%</text>
+       <text x="35%" y="19" *ngIf="overeatingForMeal">Overeat for {{overeatingForMeal}}%</text>
+
+
+
+
+  <rect [attr.height]="14"
+        x="0" y="35" width="100%"
+        class="mealline"></rect>
+  <rect  x="0" y="35" 
+        [attr.width]="forDay + '%'" [attr.height]="14"
+        class="norm"></rect>
+  <rect *ngIf="overeatingForDay" x="0" y="35"
+        [attr.width]="overeatingForDay + '%'" [attr.height]="14"
+        class="overlimit"></rect>
+  <text x="50%" y="45" class="small-text" *ngIf="forDay<=100">{{forDay}}%</text>
+  <text x="35%" y="45" class="small-text" *ngIf="overeatingForDay">Overeat for {{overeatingForDay}}%</text>
+    </g>
+</svg>
+</div>

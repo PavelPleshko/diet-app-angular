@@ -1,0 +1,18 @@
+{
+  "/api": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/auth": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+   "/users": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+   "/file": {
+    "target": "http://localhost:3000",
+    "secure": false
+  }
+}

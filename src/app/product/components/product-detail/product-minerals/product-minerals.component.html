@@ -1,0 +1,14 @@
+
+<table  class="black-text highlight" matSort (matSortChange)="sortData($event)">
+	 <div>Measure <small>(every 100g)</small></div>
+  <tr>
+    <th *ngFor="let header of headers" [mat-sort-header]="header.name" [class.amber]="isActiveHeader(header)">{{header.title}}</th>
+  </tr>
+
+  <tr *ngFor="let mineral of sortedData;let odd=odd" [ngClass]="getClasses(odd)">
+    <td>{{mineral.title}}</td>
+    <td>{{mineral.amount}}</td>
+    <td>{{mineral.RDA}} <span *ngIf="mineral.RDA">%</span></td>
+    <td>{{mineral.limit}}</td>
+  </tr>
+</table>

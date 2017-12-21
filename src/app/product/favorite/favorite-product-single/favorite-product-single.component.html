@@ -1,0 +1,16 @@
+ <div class="col s4 m4">
+    <h5 class="header">{{favorite.title}}</h5>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img [src]="favorite.imageUrl">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <div class="fav-link" (click)="onRemove(favorite)">Remove</div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-8">
+<mat-expansion-panel class="mb-2">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+       <p class="lead z-index-3">{{meal.name}}</p><br/>
+       <small class="meal-type-badge" [ngClass]="getClasses()">{{meal.type}}</small>
+
+    </mat-panel-title>
+    <mat-panel-description class="mt-1">
+      <p class="">Total items: <span class="badge green white-text">{{meal.items.length}}</span></p>
+      <p class="ml-2">Total calories:<span class="badge white black-text">{{mealCalories}}</span></p>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+    <div class="" *ngIf="meal.items.length==0"> No items yet. <a class="badge orange darken-1" routerLink="/products/list">Add now?</a></div>
+   <ul *ngIf="meal.items.length>0" class="collection black-text">
+    <li *ngFor="let item of meal.items" class="collection-item avatar">
+    <app-ration-meals-item [item]="item" draggable
+  draggableType="item"
+  [draggableData]="item"
+  draggableDropZone
+  dropAcceptType="item"  (dropDraggable)="onItemDrop($event,item)" (deleteItemEvent)="onDeleteItem($event)"></app-ration-meals-item>
+    </li>
+</ul>
+
+</mat-expansion-panel>
+  <small class="created-at left">{{meal.createdAt | time}}</small>
+</div>
+<div class="col-sm-3">
+ <button class="btn btn-large waves-effect" [ngClass]="{'grey':!isActive(meal),'pulse':isActive(meal)}" (click)="activeMeal(meal)"><i class="material-icons right black-text">{{iconValue}}</i><span>{{activeText}}</span></button>
+  </div>
+</div>

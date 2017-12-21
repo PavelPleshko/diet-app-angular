@@ -1,0 +1,56 @@
+<mat-accordion>
+<mat-expansion-panel class="exp-panel">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Vitamins for this meal
+    </mat-panel-title>
+    <mat-panel-description>
+      Check the total amount of vitamins
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div class="card">
+  <div *ngFor="let vitamin of totalVitamins"><h5>{{vitamin.title}}</h5>
+					 <app-meal-element-single  [item]="vitamin"></app-meal-element-single></div>
+					</div>
+
+</mat-expansion-panel>
+
+
+
+<mat-expansion-panel class="exp-panel">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Minerals for this meal
+    </mat-panel-title>
+    <mat-panel-description>
+      Check the total amount of minerals
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div class="card">
+ <div  *ngFor="let mineral of totalMinerals"><h5>{{mineral.title}}</h5>
+					 <app-meal-element-single  [item]="mineral"></app-meal-element-single></div>
+					</div>
+
+</mat-expansion-panel>
+
+<mat-expansion-panel class="exp-panel">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Nutrients for this meal
+    </mat-panel-title>
+    <mat-panel-description>
+      Check the total amount of nutrients
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div class="card">
+  <div *ngFor="let nutrient of totalNutrients"><h5>{{nutrient.title}}</h5>
+					 <app-meal-element-single  [item]="nutrient"></app-meal-element-single></div>
+					</div>
+
+</mat-expansion-panel>
+
+</mat-accordion>
+    

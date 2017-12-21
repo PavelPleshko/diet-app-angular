@@ -1,0 +1,13 @@
+<div #editableContentElement
+	(input)="onInput($event)"
+	class="float-sm-left"
+	contenteditable="editable"
+	>{{content}}</div>
+	<div *ngIf="showControls && !editMode" class="float-sm-right">
+		<a (click)="toggleEditMode()" class="black-text"><i class="material-icons">edit</i></a>
+	</div>
+
+	<div *ngIf="showControls && editMode" class="float-sm-right">
+		<a (click)="save()" class="black-text"><i class="material-icons">done</i></a>
+		<a (click)="cancel()" class="black-text"><i class="material-icons">not_interested</i></a>
+	</div>

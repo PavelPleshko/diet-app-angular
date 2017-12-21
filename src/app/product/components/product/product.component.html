@@ -1,0 +1,21 @@
+ <div class="row">
+    <div class="col s12 m6">
+      <div class="card card-product">
+        <div class="card-image card-img">
+          <img [src]="product.imageUrl">
+          <span class="card-title black-text"><strong>{{product.title}}</strong></span>
+          <div matTooltip="Add to favorites" class="" matTooltipPosition="above">
+              <a class="btn-floating btn-large halfway-fab-btn2 waves-effect waves-light z-depth-2" (click)="favoriteOrUnfavoriteProduct(product)"><i class="material-icons red">{{isFavorited}}</i></a>
+            </div>
+               <div matTooltip="Add to diary" class="ml-5" matTooltipPosition="above">
+          <a class="btn-floating btn-large halfway-fab right waves-effect waves-light green darken-2" (click)="addProduct(product)"><i class="material-icons">add</i></a>
+      	  </div>
+        </div>
+        <div class="card-content">
+          <p class="clearfix">I am a very simple and short description</p>
+           <button class="btn blue darken-2 white-text float-sm-right z-depth-2" (click)="openDialog()">DETAILS</button>
+        </div>
+
+      </div>
+    </div>
+  </div>

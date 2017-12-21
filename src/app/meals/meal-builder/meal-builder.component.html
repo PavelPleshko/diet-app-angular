@@ -1,0 +1,28 @@
+<div class="container">
+<div class="row meal-form-area">
+    			<form [formGroup]="mealForm" novalidate (submit)="onSubmit($event,mealForm,sel)" class="col s12">
+      <div class="row">
+        <div class="input-field col-sm-12">
+        <i class="material-icons prefix">local_restaurant</i>
+          <input formControlName="name" name="name" id="name" placeholder="Type the name of the meal..." type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col-sm-12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea name="description" id="description" formControlName="description" class="materialize-textarea" placeholder="Enter the description..."></textarea> 
+          <label for="description">Description</label>
+        </div>
+      </div>
+   <div class="input-field col-sm-6 col-md-12">
+    <select materialize="material_select" id="types" class="icons" #sel name="types" formControlName="typeOfMeal" [materializeSelectOptions]="typesOfMeal">
+      <option value="n" disabled>Choose your option</option>
+      <option *ngFor="let type of typesOfMeal" [value]="type.title" [attr.data-icon]="type.img" class="circle">{{type.title}}</option>
+    </select>
+    <label>Select type of the meal</label>
+  </div>
+  <button class="btn blue darken-3 white-text waves-effect" type="submit">Create</button>
+    </form>
+  </div>
+  </div>

@@ -1,0 +1,15 @@
+
+
+.opacity-no{
+	animation:opacity 1s;
+}
+
+
+@keyframes opacity {
+	from { 
+ opacity:1; 
+  } 
+  to {
+ opacity:0;
+ }
+}

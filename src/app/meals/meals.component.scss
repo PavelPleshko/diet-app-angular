@@ -1,0 +1,28 @@
+.warning-empty{
+	padding:8px;
+	text-align:center;
+	letter-spacing:1px;
+	background-color:rgba(150,0,0,0.4);
+}
+
+.warning-empty:hover{
+	background-color:rgba(150,0,0,0.6);
+}
+
+
+.warning-nomeal{
+	padding:8px;
+	text-align:center;
+	letter-spacing:1px;
+	background-color:rgba(0,0,200,0.4);
+}
+
+.warning-nomeal:hover{
+	background-color:rgba(0,0,200,0.6);
+}
+
+.table-products {
+	background-color:rgba(0,0,0,0.4);
+	padding:10px;
+}
+

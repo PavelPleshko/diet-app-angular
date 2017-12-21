@@ -1,0 +1,10 @@
+<div class="profile-meals-wrapper">
+	<div class="profile-meals-headers"><span class="left grey-text">My meals</span> <span class="right grey-text">Hide</span></div>
+	<br>
+	<div class="row">
+		<div class="col-sm-2 mr-3" *ngFor="let meal of limitedMeals">
+		<app-profile-meal-single [meal]="meal"></app-profile-meal-single>
+	</div>
+	</div>
+	
+</div>

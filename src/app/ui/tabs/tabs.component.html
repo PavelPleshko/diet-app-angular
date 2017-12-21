@@ -1,0 +1,9 @@
+<ul class="tabs">
+  <li class="tab" *ngFor="let item of items">
+ 
+            <a class="purple-text waves-effect text-darken-2" routerLinkActive="active-tab active" [routerLink]="item.link">{{item.title}}</a>
+  </li> 
+</ul>
+<div class="col s12 mt-1">
+<router-outlet name="modal"></router-outlet>
+</div>
